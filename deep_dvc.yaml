@@ -1,0 +1,28 @@
+stages:
+  load_data:
+    cmd: python src/split_deep.py --config=deep_params.yaml
+    deps:
+      - src/get_data_deep.py
+      - src/split_deep.py
+      - source_data/
+    outs:
+      - data/processed:
+          persist: True
+
+  train_model:
+    cmd: python src/model_train_deep.py --config=deep_params.yaml
+    deps:
+      - src/get_data_deep.py
+      - src/model_train_deep.py
+    outs:
+      - saved_models:
+          persist: True
+      - reports:
+          persist: True
+
+  evaluate_model:
+    cmd: python src/evaluate_deep.py --config=deep_params.yaml
+    deps:
+      - src/get_data_deep.py
+      - src/evaluate_deep.py
+      
