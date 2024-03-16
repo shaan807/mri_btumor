@@ -1,0 +1,53 @@
+base:
+  project: Deep Learning Brain Tumor 
+
+data_source:
+  data_src: source_data
+
+load_data_deep:
+  num_classes: 4
+  raw_data: source_data/
+  preprocessed_data: data/processed
+  full_path: training/source_data
+
+train_split:
+  split_ratio: 80
+
+model:
+  name: VGG19
+  trainable: True
+  train_path: data/processed/Training
+  test_path: data/processed/Testing
+  image_size: [255,255]
+  loss: 'categorical_crossentropy'
+  optimizer: 'adam'
+  metrics: ['accuracy']
+  epochs: 1
+  save_dir: models/trained.h5
+
+img_augment:
+  rescale: 1./255,
+  shear_range: 0.2
+  zoom_range: 0.2
+  horizontal_flip: True
+  vertical_flip: True
+  batch_size: 18
+  class_mode: 'categorical'
+
+model_dir: models
+
+mlflow_config_deep:
+  artifacts_deep_dir: artifacts_deep
+  experiment_name_deep: Deep_Learning_VGG19
+  run_name_deep: deep_mlops
+  registered_deep_model_name: xyz
+  remote_server_uri_deep: http://127.0.0.1:5000 
+
+
+
+
+
+
+
+
+
