@@ -7,3 +7,9 @@ psycopg2-binary
 argparse
 jupyterlab
 mlflow
+django
+sklearn
+tensorflow
+seaborn
+keras
+keras-preprocessing
