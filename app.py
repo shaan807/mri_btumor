@@ -8,7 +8,7 @@ import keras
 
 
 # Load the trained model
-model_path = os.path.join("models", "trained.h5")
+model_path = os.path.join("models", "brain_tumor_classifier.h5")
 model = keras.models.load_model(model_path)
 
 # Define labels

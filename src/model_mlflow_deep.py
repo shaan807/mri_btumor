@@ -66,6 +66,7 @@ def train_model_deep_mlflow(config_file):
                                                   target_size=(255,255),
                                                   batch_size=batch,
                                                   class_mode=class_mode)
+    
 
 ############################### MLFLOW STARTS FROM HERE #######################################
         mlflow_config_deep = config["mlflow_config_deep"]

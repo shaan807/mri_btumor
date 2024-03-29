@@ -8,8 +8,9 @@ argparse
 jupyterlab
 mlflow
 django
-sklearn
 tensorflow
 seaborn
 keras
 keras-preprocessing
+streamlit
+pillow

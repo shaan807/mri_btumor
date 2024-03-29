@@ -1,0 +1,8 @@
+streamlit
+numpy
+pandas
+scikit-learn
+tensorflow
+seaborn
+keras
+psycopg2-binary

@@ -187,4 +187,4 @@ model.compile(optimizer=params["model"]["optimizer"],
 model.fit(train_generator, epochs=epochs, validation_data=test_generator)
 
 # Save the model
-model.save('brain_tumor_classifier.h5')
+model.save('trained1.h5')
